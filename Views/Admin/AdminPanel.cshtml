@@ -1,0 +1,24 @@
+﻿@model IEnumerable<LHScheduler.Models.ActivityModel>
+
+<div class="container d-flex flex-wrap">
+    <div class="card" style="width: 18rem; margin:5px;">
+        <div id="add-event" class="card-body">
+
+        <form action="NewActivity">
+            <input type="submit" value="Add New Activity" />
+        </form>
+
+        </div>
+    </div>
+
+    @foreach (var activity in Model)
+    {
+        <div class="card" style="width: 18rem; margin:5px;">
+           
+            <partial name="_ActivityCard" model="activity" />
+
+        </div>    
+    }
+</div>
+
+<div id="PlaceHolderHere"></div>

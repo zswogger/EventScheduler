@@ -1,0 +1,34 @@
+﻿@model LHScheduler.Models.ActivityModel
+
+<div class="modal fade" id="sign-up">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="signUpLabel">Sign Up</h4>
+            </div>
+                <div class="modal-body">
+                    <form asp-action="processSignUp" id="form_signup" >
+                        <div class="form-group">
+                            <label for="Name">First and Last Name: </label>
+                            <input for="Name" id="Name" class="form-control"/>
+                            <input type="hidden" id="ActivityID" class="form-control" value="@Model.ActivityId"/>
+                            <input type="hidden" id="MaxParticipants" class="form-control" value="@Model.MaxParticipants"/>
+                            <input type="hidden" id="CurrentParticipants" class="form-control" value="@Model.CurrentParticipants"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email: </label>
+                            <input for="Email" id="Email" class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="Phone-Number">Phone Number: </label>
+                            <input type="tel" for="Phone-Number" id="PhoneNumber" class="form-control"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-dark" id="modal-close" onclick="close_modal()">Close</button>
+                    <button type="submit" class="btn-dark" id="btnsignup" onclick="process_sign_up()" data-save="modal">Sign Up!</button>
+                </div>
+        </div>
+    </div>
+</div>

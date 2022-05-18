@@ -1,0 +1,20 @@
+﻿@*Partial view to display search results in individual "cards"*@
+
+@model LHScheduler.Models.ActivityModel
+@{
+    var title = Model.ActivityName;
+    DateTime time = Model.DateTime;
+    string format = "MM-dd-yyyy HH:mm tt";
+    string dateTime = time.ToString(format);
+
+    int remainingSeats = Model.MaxParticipants - Model.CurrentParticipants;
+}
+
+<div id="card-number-@Model.ActivityId" class="card-body">
+    <h3 class="card-title">@title</h3>
+    <h5 class="event-dateTime">@dateTime</h5>
+    <p class="card-text">Remaining Spots: @remainingSeats<br />@Model.ActivityDescription</p>
+    
+    <button type="button" class="btn btn-dark" data-toggle="ajax-modal" data-target="#sign-up" data-url="@Url.Action("SignUp", new {id=@Model.ActivityId, maxusers=@Model.MaxParticipants, currentusers=@Model.CurrentParticipants})">Sign Up</button>
+
+</div>
