@@ -76,9 +76,10 @@ namespace LHScheduler.Services
 
         public void SignUp(int eventId, string name, string email, string phone, string status)
         {
-
+            // Sign user up for event
             string insertStatement = "INSERT INTO dbo.signups (eventid, name, email, phone, status) VALUES (" + eventId + ", '" + name + "', '" + email + "', '" + phone + "', '" + status + "');";
 
+            // Increment current users on specified event
             string incrementUsers = "UPDATE dbo.events SET current_users = current_users + 1 WHERE id = " + eventId;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -91,6 +92,30 @@ namespace LHScheduler.Services
                     conn.Open();
                     int result = cmd1.ExecuteNonQuery();
                     int result2 = cmd2.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                }
+            }
+        }
+
+        public void UpdateActivity(ActivityModel activity)
+        {
+            DateTime dateTime = activity.DateTime;
+            string format = "MM-dd-yyy HH:mm:ss tt";
+            Debug.WriteLine(activity.ActivityId);
+
+            string sqlStatement = "UPDATE dbo.events SET date = '" + dateTime.ToString(format) + "', name = '" + activity.ActivityName +"', description = '" + activity.ActivityDescription + "', max_users = " + activity.MaxParticipants + ", current_users = " + activity.CurrentParticipants + " WHERE id = " + activity.ActivityId + ";";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(sqlStatement, conn);
+
+                try
+                {
+                    conn.Open();
+                    int result = cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
