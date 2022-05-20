@@ -61,3 +61,22 @@ function process_sign_up() {
     window.alert("You have successfully signed up!");
 }
 
+function edit_event(ActivityId) {
+    $.post("/Admin/EditEvent", { id: ActivityId }), function (data) {
+        alert(data);
+        window.alert("Error");
+    }
+    window.location = 'Admin/EditEvent/' + ActivityId;
+}
+
+function delete_event(ActivityId) {
+    if (confirm("Are you sure you want to delete this event?") == true) {
+        
+        $.post("/Admin/DeleteEvent", { id: ActivityId }), function (data) {
+            alert(data);
+            window.alert("Error");
+        }
+        window.alert("Successfully deleted the event");
+    }
+}
+

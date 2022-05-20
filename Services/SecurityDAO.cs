@@ -123,5 +123,27 @@ namespace LHScheduler.Services
                 }
             }
         }
+
+        public void DeleteEvent(int id)
+        {
+            string sqlStatement = "DELETE FROM dbo.events WHERE id = " + id;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(sqlStatement, conn);
+
+                try
+                {
+                    conn.Open();
+                    int result = cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                };
+
+                conn.Close();
+            }
+        }
     }
 }

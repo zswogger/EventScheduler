@@ -15,70 +15,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\zswogger\source\repos\LHScheduler
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Admin/AdminLogin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XEFkbWluXEFkbWluTG9naW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Admin/AdminPanel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XEFkbWluXEFkbWluUGFuZWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Admin/EditActivity.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XEFkbWluXEVkaXRBY3Rpdml0eS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Admin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XEFkbWluXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Admin/NewActivity.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XEFkbWluXE5ld0FjdGl2aXR5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Home/EventsView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XEhvbWVcRXZlbnRzVmlldy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XEhvbWVcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XEhvbWVcUHJpdmFjeS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Home/RetrieveEvents.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XEhvbWVcUmV0cmlldmVFdmVudHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XFNoYXJlZFxFcnJvci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Shared/SignUpModal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XFNoYXJlZFxTaWduVXBNb2RhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Shared/_ActivityCard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XFNoYXJlZFxfQWN0aXZpdHlDYXJkLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Shared/_AdminActivityCard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XFNoYXJlZFxfQWRtaW5BY3Rpdml0eUNhcmQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XF9WaWV3SW1wb3J0cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XF9WaWV3U3RhcnQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/zswogger/source/repos/LHScheduler/Views/Admin/AdminLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -87,8 +23,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5QYW5lbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/zswogger/source/repos/LHScheduler/Views/Admin/EditActivity.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFjdGl2aXR5LmNzaHRtbA==
+[C:/Users/zswogger/source/repos/LHScheduler/Views/Admin/EditEvent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEV2ZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/zswogger/source/repos/LHScheduler/Views/Admin/Index.cshtml]
@@ -142,10 +78,6 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/zswogger/source/repos/LHScheduler/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/zswogger/source/repos/LHScheduler/Views - Copy/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MgLSBDb3B5XFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = b-j2yh54myiv
 
 [C:/Users/zswogger/source/repos/LHScheduler/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

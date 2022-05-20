@@ -17,23 +17,17 @@ namespace LHScheduler.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult SignUp()
-        {
-            ActivityModel activity = new ActivityModel();
-            return PartialView("SignUpModal", activity);
-        }
-
         public IActionResult NewActivity()
         {
             return View();
         }
 
-        public IActionResult EditActivity(int id)
+        public IActionResult EditEvent(int id)
         {
             ActivityModel activity = new ActivityModel();
-            activity = binarySearch(1);
-            return View(activity);
+            activity = binarySearch(id);
+            Debug.WriteLine(id);
+            return View("EditEvent", activity);
         }
 
         public IActionResult ProcessEdit(ActivityModel updatedActivity)
@@ -54,7 +48,7 @@ namespace LHScheduler.Controllers
 
         public IActionResult ProcessAdminLogin(string username, string password)
         {
-            if (username == "admin" && password == "admin")
+            if (username.ToLower() == "admin" && password == "admin")
             {
                 activities = securityDAO.ReturnEvents();
 
@@ -62,6 +56,15 @@ namespace LHScheduler.Controllers
             }
 
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult DeleteEvent(int id)
+        {
+            Debug.WriteLine(id);
+            securityDAO.DeleteEvent(id);
+            activities = securityDAO.ReturnEvents();
+            return View("AdminPanel", activities);
         }
 
         public ActivityModel binarySearch(int id)
