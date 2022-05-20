@@ -29,11 +29,14 @@ namespace LHScheduler.Controllers
             return View();
         }
 
+        [HttpPost]
         public IActionResult EditActivity(int id)
         {
             ActivityModel activity = new ActivityModel();
-            activity = binarySearch(1);
-            return View(activity);
+            Debug.WriteLine(id);
+            activity = binarySearch(id);
+            Debug.WriteLine("Name " + activity.ActivityName);
+            return View("EditActivity", activity);
         }
 
         public IActionResult ProcessEdit(ActivityModel updatedActivity)
@@ -70,18 +73,21 @@ namespace LHScheduler.Controllers
 
             int left = 0;
             int right = activities.Count;
-            while(left <= right)
+            while (left <= right)
             {
                 int mid = (left + right) / 2;
-                if (activities[mid].ActivityId == id)
+                if (id == activities[mid].ActivityId)
                 {
                     return activities[mid];
                 }
-                if(activities[mid].ActivityId > id)
+                if (id < activities[mid].ActivityId)
+                {
+                    right = mid - 1;
+                }
+                if (id > activities[mid].ActivityId)
                 {
                     left = mid + 1;
                 }
-                right = mid - 1;
             }
             activity.ActivityName = "Not found";
             return activity;

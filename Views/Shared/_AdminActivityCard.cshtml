@@ -15,8 +15,12 @@
     <h5 class="event-dateTime">@dateTime</h5>
     <p class="card-text">Remaining Spots: @remainingSeats<br />@Model.ActivityDescription</p>
     
-    <form action="EditActivity">
-            <input type="submit" value="Edit" />
-        </form>
+    <div class="container d-flex flex-wrap">
+        @using (Html.BeginForm("EditActivity", "Admin"))
+        {
+            <input type="hidden" name="id" value="@Model.ActivityDescription" />
+            <input type="submit" value="Edit" class="btn btn-dark" />
+        }
+    </div>
 
 </div>
