@@ -1,11 +1,13 @@
 ﻿@model LHScheduler.Models.ActivityModel
 @{
     ViewData["Title"] = "EditActivity";
+    DateTime time = Model.DateTime;
+    string format = "MM-dd-yyyy HH:mm tt";
+    string dateTime = time.ToString(format);
 }
 
-<h1>EditActivity</h1>
-
-<h4>ActivityModel</h4>
+<h1 >Edit Event</h1>
+<h4 >@Model.ActivityName</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -13,7 +15,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DateTime" class="control-label"></label>
-                <input asp-for="DateTime" class="form-control" value=@Model.DateTime/>
+                <input asp-for="DateTime" class="form-control" value=@time/>
                 <span asp-validation-for="DateTime" class="text-danger"></span>
             </div>
             <div class="form-group">

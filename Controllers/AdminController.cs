@@ -17,22 +17,30 @@ namespace LHScheduler.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult SignUp()
+        {
+            ActivityModel activity = new ActivityModel();
+            return PartialView("SignUpModal", activity);
+        }
+
         public IActionResult NewActivity()
         {
             return View();
         }
 
-        public IActionResult EditEvent(int id)
+        [HttpPost]
+        public IActionResult EditActivity(int id)
         {
             ActivityModel activity = new ActivityModel();
-            activity = binarySearch(id);
             Debug.WriteLine(id);
-            return View("EditEvent", activity);
+            activity = binarySearch(id);
+            Debug.WriteLine("Name " + activity.ActivityName);
+            return View("EditActivity", activity);
         }
 
         public IActionResult ProcessEdit(ActivityModel updatedActivity)
         {
-            Debug.WriteLine(updatedActivity.ActivityId);
             securityDAO.UpdateActivity(updatedActivity);
             activities = securityDAO.ReturnEvents();
             return View("AdminPanel", activities);
@@ -48,7 +56,7 @@ namespace LHScheduler.Controllers
 
         public IActionResult ProcessAdminLogin(string username, string password)
         {
-            if (username.ToLower() == "admin" && password == "admin")
+            if (username == "admin" && password == "admin")
             {
                 activities = securityDAO.ReturnEvents();
 
@@ -58,12 +66,12 @@ namespace LHScheduler.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult DeleteEvent(int id)
+        public IActionResult DeleteActivity(int id)
         {
             Debug.WriteLine(id);
             securityDAO.DeleteEvent(id);
             activities = securityDAO.ReturnEvents();
+
             return View("AdminPanel", activities);
         }
 
@@ -73,18 +81,21 @@ namespace LHScheduler.Controllers
 
             int left = 0;
             int right = activities.Count;
-            while(left <= right)
+            while (left <= right)
             {
                 int mid = (left + right) / 2;
-                if (activities[mid].ActivityId == id)
+                if (id == activities[mid].ActivityId)
                 {
                     return activities[mid];
                 }
-                if(activities[mid].ActivityId > id)
+                if (id < activities[mid].ActivityId)
+                {
+                    right = mid - 1;
+                }
+                if (id > activities[mid].ActivityId)
                 {
                     left = mid + 1;
                 }
-                right = mid - 1;
             }
             activity.ActivityName = "Not found";
             return activity;
